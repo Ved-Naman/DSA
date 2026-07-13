@@ -14,3 +14,25 @@ class Solution {
         return result;
     }
 }
+
+-----------------------------------------------------------------------------------------
+
+
+class Solution {
+    public List<Integer> sequentialDigits(int low, int high) {
+        List<Integer> result = new ArrayList<>();
+        String master = "123456789";
+        for(int i =0; i <=7; i++){
+            for(int j =i+2; j<= 9; j++){
+                String x = master.substring(i,j);
+                int num = Integer.parseInt(x);
+                if(num>=low && num<=high){
+                    result.add(num);
+                }
+            }
+        }
+        Collections.sort(result);
+        return result;
+    }
+}
+
