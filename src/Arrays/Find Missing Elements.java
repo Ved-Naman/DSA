@@ -11,3 +11,25 @@ class Solution {
         return result;
     }
 }
+
+--------------------------------------------------------------------------------
+
+
+
+class Solution {
+    public List<Integer> findMissingElements(int[] nums) {
+        List<Integer> result = new ArrayList<>();
+        Arrays.sort(nums);
+
+        for (int i = 0; i < nums.length - 1; i++) {
+            int currentMissing = nums[i] + 1;
+
+            while (currentMissing < nums[i + 1]) {
+                result.add(currentMissing);
+                currentMissing++;
+            }
+        }
+
+        return result;
+    }
+}
