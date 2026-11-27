@@ -1,25 +1,17 @@
 import java.util.Scanner;
 
-public class ExcitingBets {
+public class BadBoy {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        long t = scanner.nextLong();
-        while (t-- > 0) {
-            long a = scanner.nextLong();
-            long b = scanner.nextLong();
+        if (scanner.hasNextInt()) {
+            int t = scanner.nextInt();
+            while (t-- > 0) {
+                long n = scanner.nextLong();
+                long m = scanner.nextLong();
+                long i = scanner.nextLong();
+                long j = scanner.nextLong();
 
-            if (b > a) {
-                long temp = a;
-                a = b;
-                b = temp;
-            }
-
-            if (a == b) {
-                System.out.println("0 0");
-            } else {
-                long gcd = a - b;
-                long moves = Math.min(b % gcd, gcd - b % gcd);
-                System.out.println(gcd + " " + moves);
+                System.out.println("1 1 " + n + " " + m);
             }
         }
         scanner.close();
